@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Calculator</title>
+        <style>
+            body {
+                font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                height: 10vh;
+            }
+            h2{
+                color: cadetblue;
+                text-align: center;
+            }
+
+            input[type="text"],button{
+                margin: 10px;
+                padding: 5px;
+                font-size: 32px;
+                text-align: center;
+            }
+
+            button {
+                background-color: cadetblue;
+                color: antiquewhite;
+                border: black;
+                cursor: pointer;
+                align-items: center;
+                
+            }
+            button:hover {
+                background-color: cadetblue;
+            }
+            h3 {
+                margin-top: 10px;
+                text-align: center;
+            }
+            #result {
+                font-weight: bold;
+            }
+        </style>
+    </head>
+    <body>
+        <h2>SIMPLE CALCULATOR</h2>
+        <input type="text" id="num1" placeholder="Enter the first number">
+        <input type="text" id="num2" placeholder="Enter the second number">
+        <br>
+        <button onclick="add()">Add</button>
+        <button onclick="subtarct()">Subtarct</button>
+        <button onclick="multiply()">Multiply</button>
+        <button onclick="divide()">Divide</button>
+        <br>
+        <h3>RESULT= <span id="result"></span></h3>
+
+        <script>
+            function add() {
+                var num1 =parseFloat(document.getElementById("num1").value);
+                var num2 =parseFloat(document.getElementById("num2").value);
+                document.getElementById("result").textContent=num1+num2;
+            }
+            function subtarct() {
+                var num1 =parseFloat(document.getElementById("num1").value);
+                var num2 =parseFloat(document.getElementById("num2").value);
+                document.getElementById("result").textContent=num1-num2;
+            }
+            function multiply() {
+                var num1 =parseFloat(document.getElementById("num1").value);
+                var num2 =parseFloat(document.getElementById("num2").value);
+                document.getElementById("result").textContent=num1*num2;
+            }
+            function divide() {
+                var num1 =parseFloat(document.getElementById("num1").value);
+                var num2 =parseFloat(document.getElementById("num2").value);
+                document.getElementById("result").textContent=num1/num2;
+            }
+        </script>
+    </body>
+</html>
